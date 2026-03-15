@@ -1187,6 +1187,22 @@
             saveComments(arr); ta.value = ''; renderComments();
         }
         renderComments();
+
+        (function handleGithubCallback() {
+            const params = new URLSearchParams(window.location.search);
+            const token = params.get('github_token');
+            if (!token) return;
+            fetch('https://api.github.com/user', {
+                headers: { Authorization: 'token ' + token }
+            })
+                .then(r => r.json())
+                .then(user => {
+                    currentUser = { name: user.login, provider: 'github' };
+                    localStorage.setItem('auth_user', JSON.stringify(currentUser));
+                    updateAuthUI();
+                    window.history.replaceState({}, '', window.location.pathname);
+                });
+        })();
     </script>
 </body>
 
