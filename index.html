@@ -1182,15 +1182,21 @@
             const uname = document.getElementById('auth-username');
             const noAuth = document.getElementById('no-auth-note');
             const fields = document.getElementById('form-fields');
+            const authBtns = document.querySelectorAll('.oauth-btn');
+            const navAuth = document.querySelector('a.mi[href="#auth"]');
             if (currentUser) {
                 panel.classList.add('show');
                 uname.textContent = currentUser.name;
                 noAuth.style.display = 'none';
                 fields.style.display = 'block';
+                authBtns.forEach(btn => btn.style.display = 'none');
+                if (navAuth) navAuth.style.display = 'none';
             } else {
                 panel.classList.remove('show');
                 noAuth.style.display = 'block';
                 fields.style.display = 'none';
+                authBtns.forEach(btn => btn.style.display = '');
+                if (navAuth) navAuth.style.display = '';
             }
         }
         function loginWith(p) {
