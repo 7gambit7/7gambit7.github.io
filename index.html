@@ -1,0 +1,1230 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Лемехов Даниил — Персональная страница</title>
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function (m, e, t, r, i, k, a) {
+            m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+            m[i].l = 1 * new Date();
+            for (var j = 0; j < document.scripts.length; j++) { if (document.scripts[j].src === r) { return; } }
+            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+        })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js?id=107707325', 'ym');
+
+        ym(107707325, 'init', { ssr: true, webvisor: true, clickmap: true, ecommerce: "dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce: true, trackLinks: true });
+    </script>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/107707325" style="position:absolute; left:-9999px;" alt="" /></div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
+
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-PKD3KJ55');</script>
+    <!-- End Google Tag Manager -->
+
+    <script src="https://accounts.google.com/gsi/client" async></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet" />
+
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0
+        }
+
+        :root {
+            --bg: #008080;
+            --win: #c0c0c0;
+            --dark: #808080;
+            --darker: #404040;
+            --light: #ffffff;
+            --title: linear-gradient(to right, #000080 0%, #1084d0 100%);
+            --font: Tahoma, 'W95FA', Arial, sans-serif;
+            --pixel: 'VT323', monospace;
+            --tbh: 30px;
+        }
+
+        html {
+            height: 100%
+        }
+
+        body {
+            background: var(--bg);
+            font-family: var(--font);
+            font-size: 13px;
+            color: #000;
+            min-height: 100vh;
+            padding-bottom: calc(var(--tbh) + 10px);
+            background-image: radial-gradient(ellipse at 15% 85%, rgba(0, 0, 100, .2), transparent 55%),
+                radial-gradient(ellipse at 85% 15%, rgba(0, 80, 160, .15), transparent 55%);
+        }
+
+        /* ─── 3D BORDER HELPERS ─── */
+        .raised {
+            border: 2px solid;
+            border-color: var(--light) var(--darker) var(--darker) var(--light);
+            background: var(--win);
+        }
+
+        .sunken {
+            border: 2px solid;
+            border-color: var(--darker) var(--light) var(--light) var(--darker);
+            background: #fff;
+        }
+
+        .groove {
+            border: 2px solid;
+            border-color: var(--darker) var(--light) var(--light) var(--darker);
+            background: var(--win);
+            padding: 6px;
+        }
+
+        /* ─── WINDOW ─── */
+        .window {
+            background: var(--win);
+            border: 2px solid;
+            border-color: var(--light) var(--darker) var(--darker) var(--light);
+            margin-bottom: 14px;
+        }
+
+        .titlebar {
+            background: var(--title);
+            padding: 2px 4px 2px 6px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            user-select: none;
+            cursor: default;
+            height: 22px;
+        }
+
+        .tbar-l {
+            display: flex;
+            align-items: center;
+            gap: 5px
+        }
+
+        .tbar-title {
+            color: #fff;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: .02em;
+            white-space: nowrap;
+            overflow: hidden
+        }
+
+        .tbar-btns {
+            display: flex;
+            gap: 2px;
+            flex-shrink: 0
+        }
+
+        .wb {
+            width: 16px;
+            height: 14px;
+            border: 2px solid;
+            border-color: var(--light) var(--darker) var(--darker) var(--light);
+            background: var(--win);
+            font-size: 8px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            color: #000;
+            line-height: 1;
+            padding: 0;
+            font-family: var(--font);
+        }
+
+        .wb:active {
+            border-color: var(--darker) var(--light) var(--light) var(--darker)
+        }
+
+        .menubar {
+            border-bottom: 1px solid var(--dark);
+            padding: 1px 2px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0
+        }
+
+        .mi {
+            padding: 2px 8px;
+            font-size: 11px;
+            cursor: pointer;
+            color: #000;
+            text-decoration: none;
+            display: inline-block
+        }
+
+        .mi:hover,
+        .mi:focus {
+            background: #000080;
+            color: #fff;
+            outline: none
+        }
+
+        .wc {
+            padding: 8px 10px 10px
+        }
+
+        /* ─── LAYOUT ─── */
+        .desktop {
+            max-width: 920px;
+            margin: 0 auto;
+            padding: 14px 10px 0
+        }
+
+        /* ─── HERO ─── */
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 128px 1fr;
+            gap: 12px;
+            align-items: start
+        }
+
+        .photo-box {
+            width: 128px;
+            height: 128px;
+            border: 2px solid;
+            border-color: var(--darker) var(--light) var(--light) var(--darker);
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .photo-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block
+        }
+
+        .photo-ph {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            background: #c0c0c0;
+            gap: 4px;
+            font-size: 10px;
+            color: #808080;
+            text-align: center;
+            padding: 4px;
+        }
+
+        .hero-name {
+            font-family: var(--pixel);
+            font-size: 36px;
+            line-height: 1;
+            color: #000080;
+            margin-bottom: 4px;
+        }
+
+        .hero-role {
+            font-size: 11px;
+            line-height: 1.7;
+            margin-bottom: 8px
+        }
+
+        .status-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            border: 2px solid;
+            border-color: var(--darker) var(--light) var(--light) var(--darker);
+            background: #fff;
+            padding: 2px 8px;
+            font-size: 11px;
+        }
+
+        .blink {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #00aa00;
+            display: inline-block;
+            animation: bl 1s step-end infinite
+        }
+
+        @keyframes bl {
+            50% {
+                opacity: 0
+            }
+        }
+
+        .sbar {
+            display: flex;
+            border-top: 2px solid var(--darker);
+            font-size: 10px;
+            margin-top: 6px;
+        }
+
+        .sbar-cell {
+            border: 2px solid;
+            border-color: var(--darker) var(--light) var(--light) var(--darker);
+            padding: 1px 6px;
+            flex: 1;
+        }
+
+        /* ─── TABS ─── */
+        .tabs {
+            display: flex;
+            padding-left: 6px;
+            margin-bottom: -2px;
+            position: relative;
+            z-index: 2
+        }
+
+        .tab {
+            padding: 3px 14px 5px;
+            font-size: 11px;
+            cursor: pointer;
+            border: 2px solid;
+            border-color: var(--light) var(--darker) transparent var(--light);
+            background: var(--win);
+            margin-right: 2px;
+            font-family: var(--font);
+        }
+
+        .tab:not(.active) {
+            background: #b0b0b0;
+            padding-top: 5px;
+            border-bottom-color: var(--darker);
+        }
+
+        .tab.active {
+            border-bottom-color: var(--win)
+        }
+
+        .tabpane {
+            border: 2px solid;
+            border-color: var(--light) var(--darker) var(--darker) var(--light);
+            background: var(--win);
+            padding: 10px;
+            display: none;
+            position: relative;
+            z-index: 1;
+        }
+
+        .tabpane.active {
+            display: block
+        }
+
+        /* ─── BUTTON ─── */
+        .btn {
+            border: 2px solid;
+            border-color: var(--light) var(--darker) var(--darker) var(--light);
+            background: var(--win);
+            padding: 4px 16px;
+            font-family: var(--font);
+            font-size: 12px;
+            cursor: pointer;
+            color: #000;
+            text-decoration: none;
+            display: inline-block;
+            min-width: 75px;
+            text-align: center;
+        }
+
+        .btn:active,
+        .btn:focus {
+            border-color: var(--darker) var(--light) var(--light) var(--darker);
+            outline: 1px dotted #000;
+            outline-offset: -4px;
+        }
+
+        .btn.primary {
+            background: #000080;
+            color: #fff;
+            border-color: #4040b0 #000040 #000040 #4040b0;
+        }
+
+        .btn.primary:active {
+            border-color: #000040 #4040b0 #4040b0 #000040
+        }
+
+        /* ─── INPUT ─── */
+        input[type=text],
+        textarea {
+            border: 2px solid;
+            border-color: var(--darker) var(--light) var(--light) var(--darker);
+            background: #fff;
+            padding: 3px 5px;
+            font-family: var(--font);
+            font-size: 12px;
+            color: #000;
+            width: 100%;
+            outline: none;
+        }
+
+        input[type=text]:focus,
+        textarea:focus {
+            outline: 1px dotted #000;
+            outline-offset: -2px
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 65px
+        }
+
+        label {
+            font-size: 11px;
+            display: block;
+            margin-bottom: 2px
+        }
+
+        /* ─── PROJECTS TABLE ─── */
+        table.pt {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 11px
+        }
+
+        table.pt thead tr {
+            background: #000080;
+            color: #fff
+        }
+
+        table.pt th {
+            padding: 3px 8px;
+            text-align: left;
+            font-weight: 700;
+            border-right: 1px solid #3030a0
+        }
+
+        table.pt tbody tr {
+            background: #fff
+        }
+
+        table.pt tbody tr:nth-child(even) {
+            background: #f0f0f8
+        }
+
+        table.pt tbody tr:hover {
+            background: #000080;
+            color: #fff
+        }
+
+        table.pt tbody tr:hover a {
+            color: #add8e6
+        }
+
+        table.pt td {
+            padding: 4px 8px;
+            border-bottom: 1px solid #d0d0d0;
+            border-right: 1px solid #d0d0d0
+        }
+
+        table.pt a {
+            color: #000080;
+            text-decoration: underline
+        }
+
+        /* ─── CONTACTS ─── */
+        .ci {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 5px 0;
+            border-bottom: 1px solid #d0d0d0;
+            font-size: 12px
+        }
+
+        .ci:last-child {
+            border: none
+        }
+
+        .cion {
+            width: 22px;
+            height: 22px;
+            flex-shrink: 0;
+            border: 2px solid;
+            border-color: var(--light) var(--darker) var(--darker) var(--light);
+            background: var(--win);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+        }
+
+        .clabel {
+            color: #808080;
+            width: 82px;
+            font-size: 11px;
+            flex-shrink: 0
+        }
+
+        /* ─── SKILLS ─── */
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+            margin-top: 6px
+        }
+
+        .sk {
+            border: 2px solid;
+            border-color: var(--light) var(--darker) var(--darker) var(--light);
+            background: var(--win);
+            padding: 1px 8px;
+            font-size: 11px;
+        }
+
+        /* ─── PROGRESS ─── */
+        .prow {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 11px;
+            margin-bottom: 5px
+        }
+
+        .plabel {
+            width: 85px;
+            flex-shrink: 0
+        }
+
+        .ptrack {
+            flex: 1;
+            height: 16px;
+            border: 2px solid;
+            border-color: var(--darker) var(--light) var(--light) var(--darker);
+            background: #fff;
+            overflow: hidden;
+        }
+
+        .pfill {
+            height: 100%;
+            background: repeating-linear-gradient(to right, #000080 0, #000080 8px, #4040a0 8px, #4040a0 10px);
+        }
+
+        .ppct {
+            width: 30px;
+            text-align: right;
+            flex-shrink: 0
+        }
+
+        /* ─── AUTH ─── */
+        .oauth-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            width: 100%;
+            border: 2px solid;
+            border-color: var(--light) var(--darker) var(--darker) var(--light);
+            background: var(--win);
+            padding: 5px 12px;
+            font-family: var(--font);
+            font-size: 12px;
+            cursor: pointer;
+            color: #000;
+            margin-bottom: 6px;
+        }
+
+        .oauth-btn:active {
+            border-color: var(--darker) var(--light) var(--light) var(--darker)
+        }
+
+        .oauth-btn svg {
+            width: 16px;
+            height: 16px;
+            flex-shrink: 0
+        }
+
+        #auth-panel {
+            border: 2px solid;
+            border-color: var(--darker) var(--light) var(--light) var(--darker);
+            background: #fff;
+            padding: 6px 10px;
+            font-size: 12px;
+            margin-top: 8px;
+            display: none;
+            line-height: 1.8;
+        }
+
+        #auth-panel.show {
+            display: block
+        }
+
+        /* ─── COMMENTS ─── */
+        .cmt {
+            border: 2px solid;
+            border-color: var(--darker) var(--light) var(--light) var(--darker);
+            background: #fff;
+            padding: 8px 10px;
+            margin-bottom: 8px;
+            font-size: 12px;
+            animation: fu .3s ease;
+        }
+
+        @keyframes fu {
+            from {
+                opacity: 0;
+                transform: translateY(6px)
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0)
+            }
+        }
+
+        .cmt-hdr {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #d0d0d0;
+            padding-bottom: 4px;
+            margin-bottom: 5px;
+            font-size: 11px
+        }
+
+        .cmt-a {
+            color: #000080;
+            font-weight: 700
+        }
+
+        .cmt-d {
+            color: #808080
+        }
+
+        /* ─── DESKTOP ICONS ─── */
+        .icons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            padding: 6px 0 4px;
+            justify-content: flex-end
+        }
+
+        .dico {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 3px;
+            cursor: pointer;
+            width: 60px;
+            text-decoration: none
+        }
+
+        .dico-img {
+            font-size: 28px;
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center
+        }
+
+        .dico-lbl {
+            font-size: 10px;
+            color: #fff;
+            text-align: center;
+            line-height: 1.2;
+            word-break: break-word;
+            text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+            font-family: var(--font);
+            padding: 1px 2px;
+        }
+
+        .dico:hover .dico-lbl,
+        .dico:focus .dico-lbl {
+            background: #000080;
+            color: #fff;
+            text-shadow: none
+        }
+
+        /* ─── TASKBAR ─── */
+        #taskbar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: var(--tbh);
+            background: var(--win);
+            border-top: 2px solid var(--light);
+            display: flex;
+            align-items: center;
+            padding: 0 3px;
+            gap: 3px;
+            z-index: 9999;
+        }
+
+        #start-btn {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            height: 22px;
+            padding: 0 8px;
+            border: 2px solid;
+            border-color: var(--light) var(--darker) var(--darker) var(--light);
+            background: var(--win);
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 12px;
+            font-family: var(--font);
+        }
+
+        .slogo {
+            font-family: var(--pixel);
+            font-size: 16px;
+            color: #000080
+        }
+
+        .tdiv {
+            width: 3px;
+            height: 22px;
+            border-left: 1px solid var(--darker);
+            border-right: 1px solid var(--light);
+            margin: 0 2px
+        }
+
+        .ttask {
+            height: 22px;
+            padding: 0 8px;
+            font-size: 11px;
+            font-family: var(--font);
+            border: 2px solid;
+            border-color: var(--darker) var(--light) var(--light) var(--darker);
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+
+        #clock {
+            margin-left: auto;
+            height: 22px;
+            padding: 0 8px;
+            border: 2px solid;
+            border-color: var(--darker) var(--light) var(--light) var(--darker);
+            display: flex;
+            align-items: center;
+            font-size: 11px;
+            white-space: nowrap;
+        }
+
+        ::-webkit-scrollbar {
+            width: 16px
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--win)
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--win);
+            border: 2px solid;
+            border-color: var(--light) var(--darker) var(--darker) var(--light)
+        }
+
+        @media(max-width:580px) {
+            .hero-grid {
+                grid-template-columns: 1fr
+            }
+
+            .photo-box {
+                width: 80px;
+                height: 80px
+            }
+
+            .icons {
+                justify-content: flex-start
+            }
+
+            .ttask span {
+                display: none
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PKD3KJ55" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div class="desktop">
+
+        <!-- DESKTOP ICONS -->
+        <div class="icons">
+            <a class="dico" href="#about" onclick="openTab('about')">
+                <div class="dico-img">🖥️</div>
+                <div class="dico-lbl">Обо мне</div>
+            </a>
+            <a class="dico" href="#about" onclick="openTab('projects')">
+                <div class="dico-img">📁</div>
+                <div class="dico-lbl">Проекты</div>
+            </a>
+            <a class="dico" href="#contacts">
+                <div class="dico-img">📬</div>
+                <div class="dico-lbl">Контакты</div>
+            </a>
+            <a class="dico" href="#auth">
+                <div class="dico-img">🔑</div>
+                <div class="dico-lbl">Войти</div>
+            </a>
+            <a class="dico" href="#comments">
+                <div class="dico-img">💬</div>
+                <div class="dico-lbl">Гостевая</div>
+            </a>
+        </div>
+
+        <!-- ══ WINDOW 1 — HERO ══ -->
+        <div class="window">
+            <div class="titlebar">
+                <div class="tbar-l">
+                    <svg width="14" height="14" viewBox="0 0 14 14">
+                        <rect x="0" y="0" width="6" height="6" fill="#f00" />
+                        <rect x="8" y="0" width="6" height="6" fill="#0f0" />
+                        <rect x="0" y="8" width="6" height="6" fill="#00f" />
+                        <rect x="8" y="8" width="6" height="6" fill="#ff0" />
+                    </svg>
+                    <span class="tbar-title">lemekhov.spbu — Персональная страница</span>
+                </div>
+                <div class="tbar-btns"><span class="wb">_</span><span class="wb">□</span><span class="wb">✕</span></div>
+            </div>
+            <div class="menubar">
+                <a class="mi" href="#about" onclick="openTab('about');return false">Файл</a>
+                <a class="mi" href="#about" onclick="openTab('projects');return false">Проекты</a>
+                <a class="mi" href="#contacts">Контакты</a>
+                <a class="mi" href="#auth">Авторизация</a>
+                <span class="mi" style="margin-left:auto"
+                    onclick="alert('Версия 1.0.0\nЛемехов Даниил\nСПбГУ, МатМех © 2025')">Справка</span>
+            </div>
+            <div class="wc">
+                <div class="hero-grid">
+                    <div>
+                        <!--
+          ФОТО: замени src="photo.jpg" на путь к своей фотографии.
+          Раскомментируй img, закомментируй div.photo-ph
+        -->
+                        <div class="photo-box">
+                            <!-- <img src="photo.jpg" alt="Даниил Лемехов"/> -->
+                            <div class="photo-ph">
+                                <div style="font-size:32px">👤</div><span>photo.jpg</span>
+                            </div>
+                        </div>
+                        <div style="text-align:center;font-size:10px;color:#808080;margin-top:3px">128×128 px</div>
+                    </div>
+                    <div>
+                        <div class="hero-name">Даниил Лемехов</div>
+                        <div class="hero-role">
+                            📍 Санкт-Петербург<br>
+                            🎓 СПбГУ · Математико-Механический факультет<br>
+                            💻 Программная инженерия · 2 курс
+                        </div>
+                        <div class="status-pill"><span class="blink"></span>Открыт к стажировкам</div>
+                        <div style="margin-top:10px;display:flex;gap:6px;flex-wrap:wrap">
+                            <a class="btn primary" href="#about" onclick="openTab('projects')">📁 Проекты</a>
+                            <a class="btn" href="#contacts">📬 Контакты</a>
+                            <a class="btn" href="#comments">💬 Гостевая</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sbar">
+                <div class="sbar-cell">Готово</div>
+                <div class="sbar-cell">СПбГУ · МатМех</div>
+                <div class="sbar-cell" style="max-width:90px">ПИ · 2 курс</div>
+            </div>
+        </div>
+
+        <!-- ══ WINDOW 2 — TABS ══ -->
+        <div class="window" id="about">
+            <div class="titlebar">
+                <div class="tbar-l"><span style="font-size:13px">📄</span><span class="tbar-title">Лемехов Даниил —
+                        Информация</span></div>
+                <div class="tbar-btns"><span class="wb">_</span><span class="wb">□</span><span class="wb">✕</span></div>
+            </div>
+            <div class="wc" style="padding-bottom:0">
+                <div class="tabs">
+                    <div class="tab active" id="tab-about" onclick="openTab('about')">📝 Обо мне</div>
+                    <div class="tab" id="tab-skills" onclick="openTab('skills')">⚡ Навыки</div>
+                    <div class="tab" id="tab-projects" onclick="openTab('projects')">📁 Проекты</div>
+                </div>
+            </div>
+
+            <!-- Pane: about -->
+            <div class="tabpane active" id="pane-about" style="margin:0 10px 10px">
+                <!--
+      ЗАМЕНИ текст на свой!
+    -->
+                <div class="groove" style="margin-bottom:8px;font-size:12px;line-height:1.8">
+                    <strong>C:\Users\Daniil&gt; whoami</strong><br>
+                    Привет! Я студент 2 курса направления Программная инженерия на Математико-Механическом факультете
+                    СПбГУ.
+                </div>
+                <div class="groove" style="font-size:12px;line-height:1.8">
+                    Активно изучаю Python, алгоритмы и структуры данных, веб-разработку.
+                    В свободное время участвую в соревнованиях по программированию и пишу пет-проекты.
+                    Открыт к стажировкам и проектному сотрудничеству.
+                </div>
+            </div>
+
+            <!-- Pane: skills -->
+            <div class="tabpane" id="pane-skills" style="margin:0 10px 10px">
+                <div style="font-size:11px;color:#808080;margin-bottom:8px">// Уровень владения</div>
+                <!-- ЗАМЕНИ проценты под себя -->
+                <div class="prow"><span class="plabel">Python</span>
+                    <div class="ptrack">
+                        <div class="pfill" style="width:80%"></div>
+                    </div><span class="ppct">80%</span>
+                </div>
+                <div class="prow"><span class="plabel">JavaScript</span>
+                    <div class="ptrack">
+                        <div class="pfill" style="width:50%"></div>
+                    </div><span class="ppct">50%</span>
+                </div>
+                <div class="prow"><span class="plabel">SQL</span>
+                    <div class="ptrack">
+                        <div class="pfill" style="width:65%"></div>
+                    </div><span class="ppct">65%</span>
+                </div>
+                <div class="prow"><span class="plabel">HTML / CSS</span>
+                    <div class="ptrack">
+                        <div class="pfill" style="width:70%"></div>
+                    </div><span class="ppct">70%</span>
+                </div>
+                <div class="prow"><span class="plabel">Git</span>
+                    <div class="ptrack">
+                        <div class="pfill" style="width:75%"></div>
+                    </div><span class="ppct">75%</span>
+                </div>
+                <div style="margin-top:10px">
+                    <div style="font-size:11px;color:#808080;margin-bottom:5px">// Инструменты и технологии</div>
+                    <div class="skill-tags">
+                        <!-- ЗАМЕНИ/добавь свои -->
+                        <span class="sk">Linux</span><span class="sk">Docker</span><span class="sk">PostgreSQL</span>
+                        <span class="sk">Flask</span><span class="sk">LaTeX</span><span class="sk">VS Code</span>
+                        <span class="sk">PyCharm</span><span class="sk">Jupyter</span><span class="sk">NumPy</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pane: projects -->
+            <div class="tabpane" id="pane-projects" style="margin:0 10px 10px">
+                <!--
+      ЗАМЕНИ строки таблицы на свои проекты!
+      Скопируй <tr>…</tr> для добавления новых.
+    -->
+                <table class="pt">
+                    <thead>
+                        <tr>
+                            <th>Название</th>
+                            <th>Описание</th>
+                            <th>Стек</th>
+                            <th>Репозиторий</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Проект 1</strong></td>
+                            <td>Краткое описание</td>
+                            <td>Python</td>
+                            <td><a href="https://github.com/YOUR_GITHUB/repo1" target="_blank" rel="noopener">→
+                                    github</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Проект 2</strong></td>
+                            <td>Краткое описание</td>
+                            <td>JS / HTML</td>
+                            <td><a href="https://github.com/YOUR_GITHUB/repo2" target="_blank" rel="noopener">→
+                                    github</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Курсовая</strong></td>
+                            <td>Тема курсовой работы</td>
+                            <td>Python / SQL</td>
+                            <td><a href="https://github.com/YOUR_GITHUB/coursework" target="_blank" rel="noopener">→
+                                    github</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div style="margin-top:6px;font-size:10px;color:#808080">Объектов: 3 | обновлено 2025</div>
+            </div>
+        </div>
+
+        <!-- ══ WINDOW 3 — CONTACTS ══ -->
+        <div class="window" id="contacts">
+            <div class="titlebar">
+                <div class="tbar-l"><span style="font-size:13px">📬</span><span class="tbar-title">Адресная книга —
+                        Контакты</span></div>
+                <div class="tbar-btns"><span class="wb">_</span><span class="wb">□</span><span class="wb">✕</span></div>
+            </div>
+            <div class="wc">
+                <!--
+      ЗАМЕНИ href и текст на свои контакты!
+    -->
+                <div class="ci">
+                    <div class="cion">✉</div>
+                    <div class="clabel">Email</div>
+                    <div><a href="mailto:daniillembis@gmail.com" style="color:#000080">daniillembis@gmail.com</a></div>
+                </div>
+                <div class="ci">
+                    <div class="cion">✈</div>
+                    <div class="clabel">Telegram</div>
+                    <div><a href="https://t.me/ya_roiyaru" target="_blank" rel="noopener"
+                            style="color:#000080">@ya_roiyaru</a></div>
+                </div>
+                <div class="ci">
+                    <div class="cion">⬡</div>
+                    <div class="clabel">GitHub</div>
+                    <div><a href="https://github.com/7gambit7" target="_blank" rel="noopener"
+                            style="color:#000080">github.com/7gambit7</a></div>
+                </div>
+                <div class="ci">
+                    <div class="cion" style="font-size:9px;font-weight:700">VK</div>
+                    <div class="clabel">ВКонтакте</div>
+                    <div><a href="https://vk.com/gambitttttttt" target="_blank" rel="noopener"
+                            style="color:#000080">vk.com/gambitttttttt</a></div>
+                </div>
+                <div class="ci" style="border:none">
+                    <div class="cion">🎓</div>
+                    <div class="clabel">СПбГУ МатМех</div>
+                    <div><a href="https://math.spbu.ru" target="_blank" rel="noopener"
+                            style="color:#000080">math.spbu.ru</a></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ══ WINDOW 4 — AUTH ══ -->
+        <div class="window" id="auth">
+            <div class="titlebar">
+                <div class="tbar-l"><span style="font-size:13px">🔑</span><span class="tbar-title">Вход в систему —
+                        Авторизация</span></div>
+                <div class="tbar-btns"><span class="wb">_</span><span class="wb">□</span><span class="wb">✕</span></div>
+            </div>
+            <div class="wc" style="max-width:420px">
+                <div class="groove" style="margin-bottom:10px;font-size:11px;line-height:1.7">
+                    <strong>⚠ Информация</strong><br>
+                    Войди через GitHub или Google, чтобы оставить запись в гостевой книге.<br>
+                    <!--
+        ══ GITHUB OAUTH ══
+        1. github.com → Settings → Developer settings → OAuth Apps → New OAuth App
+        2. Homepage URL: https://ВАШ_ДОМЕН
+           Callback URL: https://ВАШ_ДОМЕН (или /callback если есть бэкенд)
+        3. Для обмена code → token нужен бэкенд.
+           Бесплатный шаблон: https://github.com/prose/gatekeeper (Heroku/Vercel)
+
+        ══ GOOGLE OAUTH ══
+        1. console.cloud.google.com → APIs & Services → Credentials → Create OAuth 2.0 Client
+        2. Тип: Web Application
+        3. Authorized JS origins: https://ВАШ_ДОМЕН
+        4. Подключи скрипт: <script src="https://accounts.google.com/gsi/client">
+           В loginWith('google') добавь:
+             google.accounts.id.initialize({client_id:'ВАШ_ID', callback: handleCredential})
+             google.accounts.id.prompt()
+      -->
+                    <span style="color:#808080;font-size:10px">Демо-режим: сессия в localStorage браузера.</span>
+                </div>
+                <button class="oauth-btn" onclick="loginWith('github')">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z" />
+                    </svg>
+                    Войти через GitHub
+                </button>
+                <button class="oauth-btn" onclick="loginWith('google')">
+                    <svg viewBox="0 0 24 24">
+                        <path fill="#4285F4"
+                            d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                        <path fill="#34A853"
+                            d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                        <path fill="#FBBC05"
+                            d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+                        <path fill="#EA4335"
+                            d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+                    </svg>
+                    Войти через Google
+                </button>
+                <div id="auth-panel">
+                    Вы вошли как: <strong id="auth-username" style="color:#000080"></strong>
+                    &nbsp;[<a href="#" onclick="logout();return false" style="color:#800000">выйти</a>]
+                </div>
+            </div>
+        </div>
+
+        <!-- ══ WINDOW 5 — COMMENTS ══ -->
+        <div class="window" id="comments">
+            <div class="titlebar">
+                <div class="tbar-l"><span style="font-size:13px">💬</span><span class="tbar-title">Гостевая книга</span>
+                </div>
+                <div class="tbar-btns"><span class="wb">_</span><span class="wb">□</span><span class="wb">✕</span></div>
+            </div>
+            <div class="wc">
+                <div class="groove" style="margin-bottom:10px" id="comment-form">
+                    <div id="no-auth-note" style="font-size:12px;color:#808080;margin-bottom:6px">
+                        ⚠ Для добавления записи необходимо <a href="#auth" style="color:#000080">войти в систему</a>.
+                    </div>
+                    <div id="form-fields" style="display:none">
+                        <div style="margin-bottom:8px">
+                            <label>Сообщение:</label>
+                            <textarea id="comment-text" placeholder="Оставьте запись..."></textarea>
+                        </div>
+                        <button class="btn primary" onclick="postComment()">Добавить запись</button>
+                    </div>
+                </div>
+                <div id="comment-list">
+                    <div style="font-size:12px;color:#808080;text-align:center;padding:14px">Записей нет. Будьте первым!
+                    </div>
+                </div>
+            </div>
+            <div class="sbar">
+                <div class="sbar-cell">Записей: <span id="comment-count">0</span></div>
+                <div class="sbar-cell">Гостевая книга v1.0</div>
+            </div>
+        </div>
+
+    </div><!-- /desktop -->
+
+    <!-- ══ TASKBAR ══ -->
+    <div id="taskbar">
+        <div id="start-btn"><span class="slogo">⊞</span><strong>Пуск</strong></div>
+        <div class="tdiv"></div>
+        <div class="ttask" onclick="document.querySelector('.window').scrollIntoView({behavior:'smooth'})">🖥️
+            <span>Главная</span>
+        </div>
+        <div class="ttask" onclick="gotoTab('about')">📝 <span>Обо мне</span></div>
+        <div class="ttask" onclick="gotoTab('projects')">📁 <span>Проекты</span></div>
+        <div class="ttask" onclick="scrollIntoView2('contacts')">📬 <span>Контакты</span></div>
+        <div class="ttask" onclick="scrollIntoView2('comments')">💬 <span>Гостевая</span></div>
+        <div id="clock">00:00</div>
+    </div>
+
+    <script>
+        /* ── CLOCK ── */
+        function tick() {
+            const n = new Date();
+            document.getElementById('clock').textContent =
+                String(n.getHours()).padStart(2, '0') + ':' + String(n.getMinutes()).padStart(2, '0');
+        }
+        tick(); setInterval(tick, 20000);
+
+        /* ── SCROLL ── */
+        function scrollIntoView2(id) {
+            const el = document.getElementById(id);
+            if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+        function gotoTab(name) { openTab(name); scrollIntoView2('about'); }
+
+        /* ── TABS ── */
+        const tabs = {
+            about: ['pane-about', 'tab-about'],
+            skills: ['pane-skills', 'tab-skills'],
+            projects: ['pane-projects', 'tab-projects']
+        };
+        function openTab(name) {
+            if (!tabs[name]) return;
+            Object.keys(tabs).forEach(k => {
+                const p = document.getElementById(tabs[k][0]);
+                const t = document.getElementById(tabs[k][1]);
+                if (p) p.classList.remove('active');
+                if (t) t.classList.remove('active');
+            });
+            const p = document.getElementById(tabs[name][0]);
+            const t = document.getElementById(tabs[name][1]);
+            if (p) p.classList.add('active');
+            if (t) t.classList.add('active');
+        }
+
+        /* ── AUTH ── */
+        let currentUser = null;
+        function updateAuthUI() {
+            const panel = document.getElementById('auth-panel');
+            const uname = document.getElementById('auth-username');
+            const noAuth = document.getElementById('no-auth-note');
+            const fields = document.getElementById('form-fields');
+            if (currentUser) {
+                panel.classList.add('show');
+                uname.textContent = currentUser.name;
+                noAuth.style.display = 'none';
+                fields.style.display = 'block';
+            } else {
+                panel.classList.remove('show');
+                noAuth.style.display = 'block';
+                fields.style.display = 'none';
+            }
+        }
+        function loginWith(p) {
+            if (p === 'google') {
+                google.accounts.id.initialize({
+                    client_id: '422914998387-2qqk171h3jvrsluessc8s6t3t2a33ius.apps.googleusercontent.com',
+                    callback: function (response) {
+                        const payload = JSON.parse(atob(response.credential.split('.')[1]));
+                        currentUser = { name: payload.name, provider: 'google' };
+                        localStorage.setItem('auth_user', JSON.stringify(currentUser));
+                        updateAuthUI();
+                    }
+                });
+                google.accounts.id.prompt();
+            } else {
+                // GitHub — пока демо, настроим отдельно
+                currentUser = { name: 'github_user', provider: 'github' };
+                localStorage.setItem('auth_user', JSON.stringify(currentUser));
+                updateAuthUI();
+            }
+        }
+        function logout() {
+            currentUser = null; localStorage.removeItem('auth_user'); updateAuthUI();
+        }
+        (function () {
+            try { const s = localStorage.getItem('auth_user'); if (s) { currentUser = JSON.parse(s); updateAuthUI(); } } catch (e) { }
+        })();
+
+        /* ── COMMENTS ── */
+        function getComments() { try { return JSON.parse(localStorage.getItem('guestbook98') || '[]'); } catch (e) { return []; } }
+        function saveComments(a) { localStorage.setItem('guestbook98', JSON.stringify(a)); }
+        function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
+        function renderComments() {
+            const list = document.getElementById('comment-list');
+            const cnt = document.getElementById('comment-count');
+            const arr = getComments();
+            cnt.textContent = arr.length;
+            if (!arr.length) {
+                list.innerHTML = '<div style="font-size:12px;color:#808080;text-align:center;padding:14px">Записей нет. Будьте первым!</div>';
+                return;
+            }
+            list.innerHTML = arr.map(c => `<div class="cmt"><div class="cmt-hdr"><span class="cmt-a">[${esc(c.author)}]</span><span class="cmt-d">${esc(c.date)}</span></div><div>${esc(c.text)}</div></div>`).join('');
+        }
+        function postComment() {
+            if (!currentUser) return;
+            const ta = document.getElementById('comment-text');
+            const text = ta.value.trim();
+            if (!text) return;
+            const arr = getComments();
+            arr.unshift({
+                author: currentUser.name, text,
+                date: new Date().toLocaleString('ru-RU', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' })
+            });
+            saveComments(arr); ta.value = ''; renderComments();
+        }
+        renderComments();
+    </script>
+</body>
+
+</html>
