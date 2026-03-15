@@ -21,7 +21,7 @@ exports.handler = async function (event) {
     return {
         statusCode: 302,
         headers: {
-            Location: `https://roiyaru.github.io?github_token=${token}`
+            Location: `https://7gambit7.github.io?github_token=${token}`
         }
     };
 };
