@@ -874,7 +874,7 @@
                 <a class="mi" href="#contacts">Контакты</a>
                 <a class="mi" href="#auth">Авторизация</a>
                 <span class="mi" style="margin-left:auto"
-                    onclick="alert('Версия 1.0.0\nЛемехов Даниил\nСПбГУ, МатМех © 2025')">Справка</span>
+                    onclick="document.getElementById('about-dialog').style.display='flex'">Справка</span>
             </div>
             <div class="wc">
                 <div class="hero-grid">
@@ -1144,6 +1144,38 @@
         <div class="ttask" onclick="scrollIntoView2('contacts')">📬 <span>Контакты</span></div>
         <div class="ttask" onclick="scrollIntoView2('comments')">💬 <span>Гостевая</span></div>
         <div id="clock">00:00</div>
+    </div>
+
+    <div id="about-dialog"
+        style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.4);z-index:99999;align-items:center;justify-content:center">
+        <div class="window" style="width:340px;margin:0">
+            <div class="titlebar">
+                <div class="tbar-l">
+                    <svg width="14" height="14" viewBox="0 0 14 14">
+                        <rect x="0" y="0" width="6" height="6" fill="#f00" />
+                        <rect x="8" y="0" width="6" height="6" fill="#0f0" />
+                        <rect x="0" y="8" width="6" height="6" fill="#00f" />
+                        <rect x="8" y="8" width="6" height="6" fill="#ff0" />
+                    </svg>
+                    <span class="tbar-title">О программе</span>
+                </div>
+                <div class="tbar-btns"><span class="wb"
+                        onclick="document.getElementById('about-dialog').style.display='none'">✕</span></div>
+            </div>
+            <div class="wc" style="text-align:center;padding:20px">
+                <div style="font-size:48px;margin-bottom:8px">🖥️</div>
+                <div style="font-family:var(--pixel);font-size:24px;color:#000080;margin-bottom:4px">lemekhov.spbu</div>
+                <div style="font-size:11px;margin-bottom:12px;color:#808080">Версия 1.0.0</div>
+                <div class="groove" style="text-align:left;font-size:11px;line-height:1.8;margin-bottom:12px">
+                    Персональная страница<br>
+                    Автор: Даниил Лемехов<br>
+                    СПбГУ · МатМех · ПИ · 2 курс<br>
+                    © 2025 Все права защищены
+                </div>
+                <button class="btn primary"
+                    onclick="document.getElementById('about-dialog').style.display='none'">ОК</button>
+            </div>
+        </div>
     </div>
 
     <script>
