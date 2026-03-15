@@ -1140,7 +1140,7 @@
                 google.accounts.id.initialize({
                     client_id: '422914998387-2qqk171h3jvrsluessc8s6t3t2a33ius.apps.googleusercontent.com',
                     callback: function (response) {
-                        const payload = JSON.parse(atob(response.credential.split('.')[1]));
+                        const payload = JSON.parse(decodeURIComponent(escape(atob(response.credential.split('.')[1]))));
                         currentUser = { name: payload.name, provider: 'google' };
                         localStorage.setItem('auth_user', JSON.stringify(currentUser));
                         updateAuthUI();
