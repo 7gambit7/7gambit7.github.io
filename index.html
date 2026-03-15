@@ -794,7 +794,7 @@
             </a>
         </div>
 
-        <!-- ══ WINDOW 1 — HERO ══ -->
+        <!-- ══ WINDOW 1 - HERO ══ -->
         <div class="window">
             <div class="titlebar">
                 <div class="tbar-l">
@@ -819,15 +819,8 @@
             <div class="wc">
                 <div class="hero-grid">
                     <div>
-                        <!--
-          ФОТО: замени src="photo.jpg" на путь к своей фотографии.
-          Раскомментируй img, закомментируй div.photo-ph
-        -->
                         <div class="photo-box">
-                            <!-- <img src="photo.jpg" alt="Даниил Лемехов"/> -->
-                            <div class="photo-ph">
-                                <div style="font-size:32px">👤</div><span>photo.jpg</span>
-                            </div>
+                            <img src="photo.jpg" alt="Даниил Лемехов" />
                         </div>
                         <div style="text-align:center;font-size:10px;color:#808080;margin-top:3px">128×128 px</div>
                     </div>
@@ -871,36 +864,30 @@
 
             <!-- Pane: about -->
             <div class="tabpane active" id="pane-about" style="margin:0 10px 10px">
-                <!--
-      ЗАМЕНИ текст на свой!
-    -->
                 <div class="groove" style="margin-bottom:8px;font-size:12px;line-height:1.8">
-                    <strong>C:\Users\Daniil&gt; whoami</strong><br>
+                    <strong>C:\Users\Daniil&gt; who_am_i</strong><br>
                     Привет! Я студент 2 курса направления Программная инженерия на Математико-Механическом факультете
                     СПбГУ.
                 </div>
                 <div class="groove" style="font-size:12px;line-height:1.8">
-                    Активно изучаю Python, алгоритмы и структуры данных, веб-разработку.
-                    В свободное время участвую в соревнованиях по программированию и пишу пет-проекты.
-                    Открыт к стажировкам и проектному сотрудничеству.
+                    System Programming Enjoyer :>
                 </div>
             </div>
 
             <!-- Pane: skills -->
             <div class="tabpane" id="pane-skills" style="margin:0 10px 10px">
                 <div style="font-size:11px;color:#808080;margin-bottom:8px">// Уровень владения</div>
-                <!-- ЗАМЕНИ проценты под себя -->
-                <div class="prow"><span class="plabel">Python</span>
+                <div class="prow"><span class="plabel">C / C++</span>
                     <div class="ptrack">
                         <div class="pfill" style="width:80%"></div>
                     </div><span class="ppct">80%</span>
                 </div>
-                <div class="prow"><span class="plabel">JavaScript</span>
+                <div class="prow"><span class="plabel">Kotlin</span>
                     <div class="ptrack">
-                        <div class="pfill" style="width:50%"></div>
-                    </div><span class="ppct">50%</span>
+                        <div class="pfill" style="width:60%"></div>
+                    </div><span class="ppct">60%</span>
                 </div>
-                <div class="prow"><span class="plabel">SQL</span>
+                <div class="prow"><span class="plabel">Python</span>
                     <div class="ptrack">
                         <div class="pfill" style="width:65%"></div>
                     </div><span class="ppct">65%</span>
@@ -910,28 +897,31 @@
                         <div class="pfill" style="width:70%"></div>
                     </div><span class="ppct">70%</span>
                 </div>
-                <div class="prow"><span class="plabel">Git</span>
+                <div class="prow"><span class="plabel">JavaScript</span>
                     <div class="ptrack">
-                        <div class="pfill" style="width:75%"></div>
-                    </div><span class="ppct">75%</span>
+                        <div class="pfill" style="width:55%"></div>
+                    </div><span class="ppct">55%</span>
+                </div>
+                <div class="prow"><span class="plabel">Verilog / SystemVerilog</span>
+                    <div class="ptrack">
+                        <div class="pfill" style="width:15%"></div>
+                    </div><span class="ppct">15%</span>
                 </div>
                 <div style="margin-top:10px">
                     <div style="font-size:11px;color:#808080;margin-bottom:5px">// Инструменты и технологии</div>
                     <div class="skill-tags">
-                        <!-- ЗАМЕНИ/добавь свои -->
-                        <span class="sk">Linux</span><span class="sk">Docker</span><span class="sk">PostgreSQL</span>
-                        <span class="sk">Flask</span><span class="sk">LaTeX</span><span class="sk">VS Code</span>
-                        <span class="sk">PyCharm</span><span class="sk">Jupyter</span><span class="sk">NumPy</span>
+                        <span class="sk">Linux</span><span class="sk">Windows</span>
+                        <span class="sk">Docker</span><span class="sk">Git / Github</span><span class="sk">Github
+                            Actions</span>
+                        <span class="sk">MongoDB</span><span class="sk">LaTeX</span><span class="sk">Netlify</span>
+                        <span class="sk">VS Code</span><span class="sk">JetBrains (PyCharm, IntelliJ, CLion)</span><span
+                            class="sk">Vim</span>
                     </div>
                 </div>
             </div>
 
             <!-- Pane: projects -->
             <div class="tabpane" id="pane-projects" style="margin:0 10px 10px">
-                <!--
-      ЗАМЕНИ строки таблицы на свои проекты!
-      Скопируй <tr>…</tr> для добавления новых.
-    -->
                 <table class="pt">
                     <thead>
                         <tr>
@@ -943,29 +933,24 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><strong>Проект 1</strong></td>
-                            <td>Краткое описание</td>
-                            <td>Python</td>
-                            <td><a href="https://github.com/YOUR_GITHUB/repo1" target="_blank" rel="noopener">→
+                            <td><strong>Linter for System Verilog (some checks)</strong></td>
+                            <td>Линтер SystemVerilog, созданный поверх Surelog.
+                                Проект предназначен для статического анализа кода и проверки соответствия правилам и
+                                стандартам кодирования.</td>
+                            <td>С++</td>
+                            <td><a href="https://github.com/7gambit7/SureLint" target="_blank" rel="noopener">→
                                     github</a></td>
                         </tr>
                         <tr>
-                            <td><strong>Проект 2</strong></td>
-                            <td>Краткое описание</td>
-                            <td>JS / HTML</td>
-                            <td><a href="https://github.com/YOUR_GITHUB/repo2" target="_blank" rel="noopener">→
-                                    github</a></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Курсовая</strong></td>
-                            <td>Тема курсовой работы</td>
-                            <td>Python / SQL</td>
-                            <td><a href="https://github.com/YOUR_GITHUB/coursework" target="_blank" rel="noopener">→
+                            <td><strong>Мой персональный сайт :></strong></td>
+                            <td>Сайт о себе, сделанный для зачета по курсу "Компьютерные сети"</td>
+                            <td>HTML / CSS</td>
+                            <td><a href="https://github.com/7gambit7/roiyaru.github.io" target="_blank" rel="noopener">→
                                     github</a></td>
                         </tr>
                     </tbody>
                 </table>
-                <div style="margin-top:6px;font-size:10px;color:#808080">Объектов: 3 | обновлено 2025</div>
+                <div style="margin-top:6px;font-size:10px;color:#808080">Объектов: 2 | обновлено 2026</div>
             </div>
         </div>
 
@@ -977,9 +962,6 @@
                 <div class="tbar-btns"><span class="wb">_</span><span class="wb">□</span><span class="wb">✕</span></div>
             </div>
             <div class="wc">
-                <!--
-      ЗАМЕНИ href и текст на свои контакты!
-    -->
                 <div class="ci">
                     <div class="cion">✉</div>
                     <div class="clabel">Email</div>
@@ -1023,23 +1005,6 @@
                 <div class="groove" style="margin-bottom:10px;font-size:11px;line-height:1.7">
                     <strong>⚠ Информация</strong><br>
                     Войди через GitHub или Google, чтобы оставить запись в гостевой книге.<br>
-                    <!--
-        ══ GITHUB OAUTH ══
-        1. github.com → Settings → Developer settings → OAuth Apps → New OAuth App
-        2. Homepage URL: https://ВАШ_ДОМЕН
-           Callback URL: https://ВАШ_ДОМЕН (или /callback если есть бэкенд)
-        3. Для обмена code → token нужен бэкенд.
-           Бесплатный шаблон: https://github.com/prose/gatekeeper (Heroku/Vercel)
-
-        ══ GOOGLE OAUTH ══
-        1. console.cloud.google.com → APIs & Services → Credentials → Create OAuth 2.0 Client
-        2. Тип: Web Application
-        3. Authorized JS origins: https://ВАШ_ДОМЕН
-        4. Подключи скрипт: <script src="https://accounts.google.com/gsi/client">
-           В loginWith('google') добавь:
-             google.accounts.id.initialize({client_id:'ВАШ_ID', callback: handleCredential})
-             google.accounts.id.prompt()
-      -->
                     <span style="color:#808080;font-size:10px">Демо-режим: сессия в localStorage браузера.</span>
                 </div>
                 <button class="oauth-btn" onclick="loginWith('github')">
@@ -1183,10 +1148,8 @@
                 });
                 google.accounts.id.prompt();
             } else {
-                // GitHub — пока демо, настроим отдельно
-                currentUser = { name: 'github_user', provider: 'github' };
-                localStorage.setItem('auth_user', JSON.stringify(currentUser));
-                updateAuthUI();
+                window.location.href =
+                    'https://github.com/login/oauth/authorize?client_id=Ov23li9JwwuUgqf74B1w&scope=read:user';
             }
         }
         function logout() {
